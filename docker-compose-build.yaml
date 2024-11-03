@@ -1,0 +1,17 @@
+services:
+  reverseproxy:
+    build:
+      context: ./udagram-reverseproxy
+    image: mychi/reverseproxy:latest
+  api_user:
+    build:
+      context: ./udagram-api-user
+    image: mychi/udagram-api-user:latest
+  api_feed:
+    build:
+      context: ./udagram-api-feed
+    image: mychi/udagram-api-feed:latest
+  frontend:
+    build:
+      context: ./udagram-frontend
+    image: mychi/udagram-frontend:latest
